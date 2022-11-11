@@ -1,0 +1,17 @@
+{
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "files.exclude": {
+    "node_modules": true,
+    "archives": false,
+    ".anchor": true,
+    ".next": true,
+    "build": true,
+    "dist": true,
+    "pnpm-lock.yaml": true
+  }
+}
