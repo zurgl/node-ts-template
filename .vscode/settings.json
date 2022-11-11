@@ -3,7 +3,7 @@
   "editor.insertSpaces": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
-  // "editor.formatOnSave": true,
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "files.exclude": {
     "node_modules": true,
