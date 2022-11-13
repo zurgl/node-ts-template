@@ -12,6 +12,6 @@
     ".next": true,
     "build": true,
     "dist": true,
-    "pnpm-lock.yaml": true
+    "pnpm-lock.yaml": false
   }
 }

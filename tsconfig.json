@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6"],
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "declaration": true,
     "rootDir": "src",
     "outDir": "build",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": false
+  },
+    "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   }
 }
