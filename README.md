@@ -1,5 +1,16 @@
 # Node template setup
 
+## Setup node
+
+```text
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+nvm install lts/hydrogen
+nvm use lts/hydrogen
+corepack enable
+corepack prepare pnpm@8.5.1 --activate
+alias pn pnpm
+```
+
 ## Working Dir
 
 ```text
