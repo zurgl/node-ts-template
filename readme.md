@@ -3,7 +3,7 @@
 ## Working Dir
 
 ```text
-mkdir fp-ts 
+mkdir fp-ts
 cd ft-tp
 pn init
 ```
@@ -12,9 +12,7 @@ pn init
 
 ## Typescript
 
-
 ### Add typescript
-
 
 ```text
 pn add -D typescript @types/node
@@ -47,14 +45,14 @@ bat build/index.js
 console.log('Hello world!');
 ```
 
-
 ### Configure sripts
 
 ```text
 pn add -D ts-node nodemon rimraf
 ```
 
-indside `nodemon.json`
+inside `nodemon.json`
+
 ```json
 {
   "watch": ["src"],
@@ -64,7 +62,8 @@ indside `nodemon.json`
 }
 ```
 
-indside `package.json`
+inside `package.json`
+
 ```json
 {
 ...
@@ -111,6 +110,7 @@ Successfully created .eslintrc.json file in /home/zu/workspace/fp-ts/project-tem
 #### Ignore specific asset
 
 inside `.eslintignore`
+
 ```text
 node_modules
 build
@@ -122,7 +122,6 @@ dist
 
 #### script `pn lint`
 
-
 ```json
 ...
   "scripts": {
@@ -133,10 +132,9 @@ dist
 ...
 ```
 
-
 ## Prettier
 
-### Install and config
+### Install and config prettier
 
 ```text
 pn add -D prettier
@@ -144,6 +142,7 @@ touch .prettierrc
 ```
 
 inside `.prettierrc`
+
 ```json
 {
   "semi": false,
@@ -154,6 +153,7 @@ inside `.prettierrc`
 ```
 
 inside `package.json`
+
 ```json
 {
   "scripts": {
@@ -200,10 +200,12 @@ inside `.vscode/settings`
 pn add -D eslint-config-prettier eslint-plugin-prettier
 ```
 
-* `eslint-config-prettier`: Turns off all ESLint rules that have the potential to interfere with Prettier rules.
-* `eslint-plugin-prettier`: Turns Prettier rules into ESLint rules.
+- `eslint-config-prettier`: Turns off all ESLint rules that have the potential
+  to interfere with Prettier rules.
+- `eslint-plugin-prettier`: Turns Prettier rules into ESLint rules.
 
 inside `.eslintrc`
+
 ```json
 {
   "root": true,
@@ -226,13 +228,15 @@ inside `.eslintrc`
 ## Husky
 
 ### Install and auto-config
+
 ```text
-pn dlx husky-init && pn install 
+pn dlx husky-init && pn install
 ```
 
 ### Configure hook
 
 inside `.husky/pre-commit`
+
 ```shell
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
@@ -243,11 +247,12 @@ pnpm run lint
 
 ## lint-staged
 
-```text 
+```text
 pn add -D lint-staged
 ```
 
 inside `package.json`
+
 ```json
 "lint-staged": {
   "*.{ts,js}": [
@@ -257,7 +262,8 @@ inside `package.json`
 }
 ```
 
-inside `_husky/pre-commit`
+inside `.husky/pre-commit`
+
 ```shell
 ...
 pnpm exec lint-staged
@@ -265,7 +271,7 @@ pnpm exec lint-staged
 
 ## Git
 
-```text 
+```text
 git init
 git add .
 git commit -m "first commit"
@@ -276,20 +282,19 @@ git push -u origin main
 
 ## Pijul
 
-```text 
+```text
 pijul init
 pijul add .
 pijul record -m "first commit"
 pijul push zurgl@ssh.pijul.com:node-ts-template
 ```
 
-
 ## References
 
-* [typescript setup](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
-* [eslint setup](https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/)
-* [prettier setup](https://khalilstemmler.com/blogs/tooling/prettier/)
-* [husky Example](https://khalilstemmler.com/blogs/tooling/enforcing-husky-precommit-hooks/)
-* [husky](https://typicode.github.io/husky/#/?id=install)
-* [lint-staged](https://github.com/okonet/lint-staged)
-* [git](https://gist.github.com/c0ldlimit/4089101)
+- [typescript setup](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
+- [eslint setup](https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/)
+- [prettier setup](https://khalilstemmler.com/blogs/tooling/prettier/)
+- [husky Example](https://khalilstemmler.com/blogs/tooling/enforcing-husky-precommit-hooks/)
+- [husky](https://typicode.github.io/husky/#/?id=install)
+- [lint-staged](https://github.com/okonet/lint-staged)
+- [git](https://gist.github.com/c0ldlimit/4089101)

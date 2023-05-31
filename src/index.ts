@@ -4,7 +4,7 @@ import { pipe } from 'fp-ts/lib/function'
 import * as O from 'fp-ts/lib/Option'
 import * as A from 'fp-ts/lib/Array'
 
-type ParsedUrl = ReturnType<typeof parseUrl>
+export type ParsedUrl = ReturnType<typeof parseUrl>
 
 const url = 'http://www.domain.com/path/name?foo=bar&bar=42#some-hash'
 
@@ -26,4 +26,4 @@ function isDotComOpt(url: string): boolean {
   )
 }
 
-console.log(isDotComOpt(url))
+console.log('result:', isDotComOpt(url))
